@@ -5,6 +5,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// MongoDB setup
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('localhost:21017/express_mongodb_backbone_library');
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
